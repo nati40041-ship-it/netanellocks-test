@@ -751,6 +751,25 @@
       .top-nav .nav-btns { display: none; }
     }
   </style>
+<!-- Google tag (gtag.js) + מעקב לחיצות טלפון ווואטסאפ – נתנאל המנעולן -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18236884391"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18236884391');
+
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    if (href.indexOf('tel:') === 0) {
+      gtag('event', 'conversion', {'send_to': 'AW-18236884391/hcCgCLSV7b0dEKeLg_hD'});
+    } else if (/wa\.me|whatsapp/i.test(href)) {
+      gtag('event', 'conversion', {'send_to': 'AW-18236884391/ZCGVCLeV7b0dEKeLg_hD'});
+    }
+  }, true);
+</script>
 </head>
 <body>
 <!-- SPLASH SCREEN -->
